@@ -96,9 +96,7 @@ noremap <leader>q :NERDTreeToggle<CR>
 " NERDtree show hidden file
 let NERDTreeShowHidden=1
 
-"set autoindent
-" Enable mouse support in console
-
+set autoindent
 
 " And so is Artificial Intellegence!
 set smartcase
