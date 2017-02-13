@@ -65,7 +65,7 @@ set nocompatible
 syntax enable
 
 "tab as space
-"On pressing tab, insert 2 spaces 
+"On pressing tab, insert 2 spaces
 set expandtab
 " show existing tab with 2 spaces width
 set tabstop=4
@@ -74,7 +74,7 @@ set shiftwidth=4
 
 "current line highlight
 set cursorline
-highlight CursorLine cterm=NONE ctermbg=lightgrey 
+highlight CursorLine cterm=NONE ctermbg=lightgrey
 
 "subble CursorLine
 highlight CursorColumn guibg=#404040
@@ -100,7 +100,7 @@ set autoindent
 
 " And so is Artificial Intellegence!
 set smartcase
-set ignorecase      " ignore case when searching 
+set ignorecase      " ignore case when searching
 set title           " show title in console title bar
 set hlsearch        " highlight searches
 
