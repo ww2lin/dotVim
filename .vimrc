@@ -17,6 +17,7 @@ Plugin 'sbdchd/neoformat'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -90,7 +91,6 @@ let g:airline_theme='bubblegum'
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
-
 " NERDtree Toggle Shortcut
 noremap <leader>q :NERDTreeToggle<CR>
 " NERDtree show hidden file
@@ -123,10 +123,23 @@ set path+=**
 " Display all matching files when we tab complete
 set wildmenu
 
+"split on right and below
+set splitbelow
+set splitright
+
+" Space, Enter, or go to the end of the first line and hit Shift+Space, Enter.
+" Either will add the empty line between the first and second lines, and leave you in normal mode.
+noremap <silent> <s-space> :exe "normal a".nr2char(getchar())<CR>
+
 " NOW WE CAN:
 " - Hit tab to :find by partial match
 " - Use * to make it fuzzy
 
 " THINGS TO CONSIDER:
 " - :b lets you autocomplete any open buffer
+"
+"ctrlp
+"ignore .gitignore files
+ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
 
